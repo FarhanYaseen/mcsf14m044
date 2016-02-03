@@ -1,0 +1,29 @@
+﻿@using laptopDeals.Models;
+@{
+    ViewBag.Title = "CartShow";
+    Layout = "/Views/Shared/_LayoutPage2.cshtml";
+}
+
+<table style="color:white">
+    <tr>
+        <th style="font-size:x-large;">ID</th>
+        <th style="font-size: x-large;"> Product id</th>
+        <th style="font-size: x-large;"> Customer Id  </th>
+        <th style="font-size: x-large;">  Quantity  </th>
+        <th style="font-size: x-large;">  Amount </th>
+    </tr>
+
+    <strong>
+        <tr>
+
+            <td style="color: white">@Model.Id</td>
+            <td style="color:white">@Model.pid</td>
+            <td style="color:white">@Model.cid</td>
+            <td style="color:white">@Model.quantity</td>
+            <td style="color:white">@Model.total</td>
+
+        </tr>
+    </strong>
+</table>
+<a href="/Home"> <input type="button" value="Shopping More"  style="border-radius: 5px"></a>
+<a href="/Home/BuyNow"> <input type="button" value="Buy now" style="border-radius: 5px"></a>

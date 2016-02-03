@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Details";
+}
+
+
+<center>
+    <h2>Detail of Your selected Product</h2>
+<div>
+    <img src="@Url.Content("~/images/image_P_" +@Model.pid+ ".jpg")" />
+</div>
+    <h3>@Model.name [RS: @Model.price]</h3>
+    <h3> @Model.description</h3>
+        <form method="post" action="/Home/AddCart?pid=@Model.pid" class="qtyFrm frm pull-center">
+          <input name="qty" type="text" min="1" required placeholder="Enter Quantity">
+        <button type="submit" >Add to cart</button>
+    </form>
+
+    </center>

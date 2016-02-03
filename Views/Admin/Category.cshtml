@@ -1,0 +1,33 @@
+﻿@using laptopDeals.Models;
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<center>
+<table border="1" style="color:white">
+    <tr>
+        <th>Category id</th>
+        <th>Category Name</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+
+
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.cid</td>
+            <td>@m.name</td>
+
+            <td><a href="/Product/EditCategory/@m.cid">Edit Category</a></td>
+            <td><a href="/Product/DeleteCategory/@m.cid">Delete Category</a></td>
+        </tr>
+
+    }
+
+</table>
+    </center>
+
+

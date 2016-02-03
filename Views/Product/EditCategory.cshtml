@@ -1,0 +1,50 @@
+﻿@using laptopDeals.Models;
+@{
+    ViewBag.Title = "EditCategory";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+
+<body>
+    <form id="editForm" role="form" method="post" action="/Product/SaveCategory/?@Model.cid">
+        <div class="form-group">
+            <label for="cid">Category id:</label>
+            <input type="text" class="form-control" name="cid" readonly="readonly" value="@Model.cid">
+        </div>
+        <div class="form-group">
+            <label for="name">Category Name:</label>
+            <input type="text" class="form-control" name="name" value="@Model.name">
+        </div>
+
+
+        <input type="submit" class="btn btn-default" value="Update" />
+    </form>
+    </div>
+
+
+    <style>
+        #editForm {
+            margin-top: 70px;
+            margin-left: 150px;
+            margin-bottom: 150px;
+        }
+
+            #editForm input {
+                width: 350px;
+                margin-top: 10px;
+                margin-left: 15px;
+            }
+
+            #editForm label {
+                font-size: 16px;
+                margin-top: 20px;
+            }
+
+            #editForm .btn-default {
+                width: 120px;
+                margin-top: 30px;
+            }
+    </style>
+
+</body>

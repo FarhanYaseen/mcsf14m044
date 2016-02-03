@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script>
+    $(document).ready(function(){
+        $("#b1").click(function(){
+            var a=$("#1").val();
+            if(a=="")
+            {
+                alert("Name is not given");
+            }
+            var b=$("#2").val();
+            if(b=="")
+            {
+                alert("Password is not given");
+            }
+            
+            var d=$("#4").val();
+            if(d=="")
+            {
+                alert("Email is not given");
+            }
+            var e=$("#5").val();
+            if(e=="")
+            {
+                alert("phoneNo is not given");
+            }
+        });
+    });
+    </script>
+<script src="~/Scripts/jquery-1.12.0.min.js"></script>
+
+    <html>
+    
+
+    <body style="background-image:url('/images/bg.jpg')">
+        <div style="width:300px;height:310px;align-content:center; margin-left:35%; margin-top:10%">
+            <form method="get" action=" /Home/Register">
+                <center>
+                    <h1 style="font-family:Algerian;color:wheat"> &nbsp;&nbsp; Sign &nbsp;Up</h1>
+                    <br>
+                    <span>
+                        <label style="color:wheat"><b>Enter name</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" name="name" id="name"  required/>
+                    </span>
+                    <br />
+                    <br>
+                    <span>
+                        <label style="color:wheat"><b>Enter password</b>&nbsp;</label>
+                        <input type="text" name="pass" id="id" required />
+                    </span>
+                    <br />
+                   
+                    <br>
+                    <span>
+                        <label style="color:wheat"><b>Enter email</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" name="email" id="mail" required />
+                    </span>
+                    <br />
+                    <br>
+                    <span>
+                        <label style="color:wheat"><b>Enter phone No</b></label>
+                        <input type="text" name="phn" id="phone no" required />
+                    </span>
+                    <br />
+                    <br >
+                    <span>
+                        <input type="hidden" name="role" id="role" value=" customer" />
+                    </span>
+                    <br />
+
+                    <br>
+                    <button>SignUp</button>
+                    <br />
+
+                </center>
+            </form>
+        </div>
+        <div  style="background-color :white;width:400px; height:300px; margin-left:60%;margin-top:-20%">
+            <img  src="~/images/img.jpg" style="width:100%; height:100%"/>
+        </div>
+    </body>
+</html>

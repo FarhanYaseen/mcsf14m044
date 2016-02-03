@@ -1,0 +1,33 @@
+﻿@using laptopDeals.Models;
+@{
+    ViewBag.Title = "customer";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+
+<body>
+    <center>
+        <h2 style="color:deeppink; font-size:xx-large;">Your Profile</h2>
+        <table id="tbl" align="center" style="color:dodgerblue;  margin-top:30px;">
+            <tr>
+                <th style="font-size:large; font-weight:bold; width:200px">  Id  </th>
+                <th style="font-size: large; font-weight: bold; width: 200px">  Username  </th>
+                <th style="font-size: large; font-weight: bold; width: 200px">  Password  </th>
+                <th style="font-size: large; font-weight: bold; width: 200px">  Email Address  </th>
+                <th style="font-size: large; font-weight: bold; width: 200px">  Phone No  </th>
+            </tr>
+            <tr>
+                <td style="color:peachpuff; margin-left:100px" display:inline-block>@Model.username</td>
+                <td style="color: peachpuff; margin-left: 100px" display:inline-block>@Model.password</td>
+                <td style="color: peachpuff; margin-left: 100px" display:inline-block>@Model.phone_no</td>
+                <td style="color: peachpuff; margin-left: 100px" display:inline-block>@Model.email_address</td>
+
+            </tr>
+        </table>
+        <a href="/Customer/EditCustomerProfile/@Model.Id" style="margin-left:20px">
+            <input type="button" value="Update Profile" style=" margin-top:100px ;width: 110px; height: 35px; font-size: 14px; color:green; background-color: lightpink; border-radius: 10px" class="btn btn-default" />
+        </a>
+
+    </center>
+
+</body>
+

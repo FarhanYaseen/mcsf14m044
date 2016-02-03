@@ -1,0 +1,17 @@
+﻿@using laptopDeals.Models;
+@{
+    ViewBag.Title = "CustomerProfile";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+
+
+<body>
+
+    <h4 style="color:lightpink; font-weight:600"><span class="glyphicon glyphicon-hand-right"></span>Name: </h4><h4 style="color:green">@Model.username</h4>
+    <h4 style="color:lightpink; font-weight:600"><span class="glyphicon glyphicon-hand-right"></span>  Phone no: </h4><h4 style="color:green">@Model.phone_no</h4>
+    <h4 style="color:lightpink; font-weight:600"><span class="glyphicon glyphicon-hand-right"></span>  email address: </h4><h4 style="color:green">@Model.email_address</h4>
+    <a href="/Customer/EditCustomerProfile/@Model.Id" style="margin-left:20px">
+        <input type="button" value="Edit Profile"
+               class="btn btn-default" />
+    </a>
+</body>

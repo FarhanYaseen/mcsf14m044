@@ -1,0 +1,32 @@
+﻿@using laptopDeals.Models;
+@{
+    ViewBag.Title = "ViewCustomers";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<center>
+<h2 style="color:white" >Customers</h2>
+<table style="color:white;  margin-top:30px" border="1">
+    <tr>
+        <th style="font-size: large;"> Id</th>
+        <th style="font-size: large;">  Username  </th>
+        <th style="font-size: large;">  Password  </th>
+        <th style="font-size: large">  Email Address  </th>
+        <th style="font-size: large">  Phone No  </th>
+    </tr>
+
+
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.Id</td>
+            <td>@m.username</td>
+            <td>@m.password</td>
+            <td>@m.email_address</td>
+            <td>@m.phone_no</td>
+        </tr>
+
+    }
+
+</table>
+    </center>

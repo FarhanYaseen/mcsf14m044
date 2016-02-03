@@ -1,0 +1,63 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Laptop Deals</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image:url('/images/bg.jpg')">
+    <nav class="navbar navbar-inverse" style="background-color:black">
+        <div class="container-fluid">
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Customer <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Admin/ViewCustomers">View Customer</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Admin/Laptops">View Products</a></li>
+                            <li><a href="/Admin/Add">Add Products</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Admin/Category">View Category</a></li>
+                            <li><a href="/Product/AddCategory">Add Category</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li style="color:black"><a href="/Home/login"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+
+</body>
+</html>
+
+

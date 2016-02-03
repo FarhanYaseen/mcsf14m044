@@ -1,0 +1,20 @@
+﻿@using laptopDeals.Models;
+@{
+    ViewBag.Title = "ShowProducts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center><h1 style="background-color:black; font-family:'Comic Sans MS';color:peachpuff; margin-top:20px">Products</h1></center>
+<div class="details_big_box">
+    @foreach (var x in Model)
+    {
+
+        <div style="display:inline-block">
+            <a href="/Home/Details/?id=@x.pid"><img src="@Url.Content("~/images/image_P_" +x.pid+ ".jpg")" style="margin-left:120px;margin-top:100px; width:100px;height:100px" /></a>
+            <h4 style="margin-left: 100px; font-family: Calibri; color: peachpuff">@x.name</h4>
+            <h4 style="margin-left: 150px; font-family: Calibri; color: peachpuff">@x.price Rs.</h4>
+            <a href="/Home/Details/?id=@x.pid"> <input type="button" value="Shop Now" style="width: 110px; height: 35px; margin-left: 120px; font-size: 14px; color:black; background-color: peachpuff; border-radius: 10px"></a>
+        </div>
+
+    }
+</div>

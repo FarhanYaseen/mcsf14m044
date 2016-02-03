@@ -1,0 +1,28 @@
+﻿@using laptopDeals.Models;
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<body>
+    <center>
+        <form action="/Product/AddCat" method="post" enctype="multipart/form-data">
+            <label for="name">Category</label>
+            <input type="text" class="form-control" name="cat" style="width:200px;height:40px">
+
+
+            <label class="contact"><strong>Image:</strong></label>
+            <input type="file" name="image" required />
+            <input type="submit" class="btn btn-default" value="Add" />
+
+        </form>
+    </center>
+
+   
+
+</body>
+
+
+
+

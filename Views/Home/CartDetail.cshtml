@@ -1,0 +1,29 @@
+﻿
+@using laptopDeals.Models;
+@{
+    ViewBag.Title = "CartDetail";
+    Layout = "/Views/Shared/_LayoutPage2.cshtml";
+}
+
+<table style="color:white">
+    <tr>
+        <th style="font-size:x-large;">ID</th>
+        <th style="font-size: x-large;">Product id</th>
+        <th style="font-size: x-large;">  Quantity  </th>
+        <th style="font-size: x-large;">  Amount </th>
+    </tr>
+
+ 
+        
+@foreach (order x in Model)
+{
+    <tr>
+            <td style="color: white">@x.Id</td>
+            <td style="color:white">@x.pid</td>
+            <td style="color:white">@x.quantity</td>
+            <td style="color:white">@x.total</td>
+
+        </tr>
+}
+</table>
+

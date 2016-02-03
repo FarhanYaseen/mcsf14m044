@@ -1,0 +1,33 @@
+﻿@using laptopDeals.Models;
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<body style="background-image:url('/images/bg.jpg')">
+    <center>
+        <h1 style="color:white">Welcome to Admin Panel</h1>
+        <h1 style="color:white">Your Profile</h1>
+        <table>
+            <tr>
+            <th style="color: whitesmoke; font-size: xx-large">Name: </th>
+            <th style="color: whitesmoke; font-size: xx-large">Phone no: </th>
+            <th style="color: whitesmoke; font-size: xx-large">email address: </th>
+            </tr>
+
+            <tr>
+                <td style="color:darkred; font-size:xx-large">@Model.username</td>
+            <td style="color: darkred; font-size: xx-large">@Model.phone_no</td>
+            <td style="color: darkred; font-size: xx-large">@Model.email_address</td>
+
+             </tr>
+        </table>
+        <a href="/Admin/EditProfile/@Model.Id">
+            <input type="button" value="Update Profile"
+                   class="btn btn-default" />
+        </a>
+            
+      </center>
+</body>
+<
